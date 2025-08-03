@@ -9,7 +9,7 @@
     	<script src="aframe-ar.js"></script>
 	<script src="gesture-detector.js"></script>
     	<script src="gesture-handler.js"></script>
-	<script src="aframe-transparent-video-shader.umd.js"></script>
+	<!--<script src="aframe-transparent-video-shader.umd.js"></script>-->
 	<link rel="stylesheet" href="styles.css">
 	</head>
 <body style="margin : 0px; overflow: hidden;">
@@ -27,7 +27,7 @@
 	<a-asset-item id="glb_model2" src="foto_e_iconos.glb"></a-asset-item>
     	<video id="evideo" preload="auto" autoplay="false" loop="true" webkit-playsinline playsinline crossorigin="anonymous">
 		<!-- HEVC video for safari support -->
-        <source src="https://ik.imagekit.io/julio00004/cv_video/hologramas.mov/ik-video.mp4?updatedAt=1752549199071" type="video/mp4;codecs=hvc1">
+        <source src="hologramas.mov" type="video/mp4;codecs=hvc1">
           	<!-- WEBM video for chrome and firefox -->
         <source src="hologramas.webm" type="video/webm" />
 	</video>
@@ -38,8 +38,7 @@
 		<a-entity sound="src: #audio;"></a-entity>
 	       	<a-entity class="clickable" gesture-handler="minScale: 1.5; maxScale: 8" gltf-model="#glb_model1" scale="1 1 1" position="0 0 0" rotation="0 0 0">
 		<a-entity gltf-model="#glb_model2" scale="1 1 1" position="0 0.03 0" rotation="0 0 0">
-		<a-entity geometry="primitive: plane; width: 2.5; height: 1.5" material="shader: transparent-video; src: #evideo;" scale="0.24 0.22 0.22" position="0 0 -0.56" rotation="-90 0 0"> 
-		</a-entity>		       
+		<a-video src="#evideo" scale="0.24 0.22 0.22" position="0 0.02 -0.56" rotation="-90 0 0" width="2.5" height="1.5" color="#FFFFFF"></a-video>	       
                	</a-entity
 		</a-entity>	
 	   </a-marker> 
@@ -106,4 +105,5 @@ function goURL6()
 	window.location.href="https://wa.me/525588264345?text=mensaje%20sobre%20vacante%20laboral";
 }
 	</script>
+
 </html>
